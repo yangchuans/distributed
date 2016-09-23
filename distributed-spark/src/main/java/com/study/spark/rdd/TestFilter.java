@@ -22,6 +22,7 @@ public class TestFilter {
 	/**
 	 * 统计单词个数
 	 */
+	@SuppressWarnings("serial")
 	public static void countWords(JavaSparkContext sc){
 		List<String> strLine=new ArrayList<String>();
 		strLine.add("how are you");
