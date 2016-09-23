@@ -100,7 +100,7 @@
 <!-- 	<table tableName="cl_data_auth"> -->
 <!-- 		<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
 <!-- 	</table> -->
-		<table tableName="cl_es_monitor_index">
+		<table tableName="cl_action_strategy">
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 	</context>
