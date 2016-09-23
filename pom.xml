@@ -11,5 +11,8 @@
   	<module>distributed-redis</module>
   	<module>distributed-kafka</module>
   	<module>distributed-elasticsearch</module>
+  	<module>distributed-dao</module>
+  	<module>distributed-service</module>
+  	<module>distributed-web</module>
   </modules>
 </project>
