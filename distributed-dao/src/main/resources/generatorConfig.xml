@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+<classPathEntry
+		location="/home/yangchuan/developer/m2/repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar" />
+	<context id="datacenter" targetRuntime="MyBatis3" introspectedColumnImpl="com.bdms.ibatis.generator.api.IntrospectedColumn">
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.133.172:3306/bdms" userId="root"
+			password="123456" />
+
+		<javaTypeResolver type="com.bdms.ibatis.generator.types.JavaTypeResolverImpl">
+			<property name="forceBigDecimals" value="false"/>
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.study.model"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="mybatis.sqlmap"
+			targetProject="src/main/resources" />
+
+		<javaClientGenerator targetPackage="com.study.mapper"
+			targetProject="src/main/java" type="XMLMAPPER" />
+		
+<!-- 		<table tableName="meln_group_dimension"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="monitor_dimension"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="monitor_dimension_alarm"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="monitor_dimension_value"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="monitor_groups"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="monitor_history_alarm"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="role"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="user"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="resource"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="user_info"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="monitor_dimension"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_alarm_cfg_user_rel"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_alarm_data_source_rel"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_data_source"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_data_source_group"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_defined_alarm_token"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_monitor_alarm_cfg"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_monitor_alarm_history"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_monitor_dimension_value"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_resource_data_source_rel"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_resource_group_data_source_rel"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_t_data_source_group_rel"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="cl_alarm_action_rel"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 		</table> -->
+<!-- 	<table tableName="cl_action_strategy"> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 	</table> -->
+<!-- 	<table tableName="cl_data_auth"> -->
+<!-- 		<generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+<!-- 	</table> -->
+		<table tableName="cl_es_monitor_index">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+	</context>
+</generatorConfiguration>
