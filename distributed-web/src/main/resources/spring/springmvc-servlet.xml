@@ -18,14 +18,15 @@
        http://www.springframework.org/schema/util/spring-util-4.3.xsd
        http://www.springframework.org/schema/tx  
        http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
-	
+    <!-- 包扫描:多个包用逗号隔开,不能有空格 -->
+	<context:component-scan base-package="com.study.dao,com.study.service,com.study.controller"/>
     <mvc:view-controller path="/" view-name="redirect:/test/action"/>
-    <mvc:resources mapping="/common/**" location="/common/" />
+    <!-- <mvc:resources mapping="/common/**" location="/common/" /> -->
 	<!-- Configures the @Controller programming model -->
     <mvc:annotation-driven/>
     <!-- Scans the classpath of this application for @Components to deploy as beans -->
-    <context:component-scan base-package="com.study.controller,com.study.service,com.study.dao"/>
     <bean id="freeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+	        <property name="order" value="0"/>
 	        <property name="cache" value="true"/>
 	        <property name="prefix" value="" />
 	        <property name="suffix" value=".ftl"/>
@@ -35,7 +36,6 @@
 	        <property name="allowRequestOverride" value="true" />
 	        <property name="contentType" value="text/html;charset=UTF-8"/>
 	        <property name="requestContextAttribute" value="rc"/>
-	        <property name="order" value="0"/>
     </bean>
 	 <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		     <property name="order" value="1" />

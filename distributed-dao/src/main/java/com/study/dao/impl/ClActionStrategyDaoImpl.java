@@ -16,7 +16,6 @@ public class ClActionStrategyDaoImpl implements ClActionStrategyDao {
 	@Autowired
 	private ClActionStrategyMapper actionMapper;
 	
-	@Override
 	public List<ClActionStrategy> getAllAction() {
 		ClActionStrategyExample example = new ClActionStrategyExample();
 		return actionMapper.selectByExample(example);

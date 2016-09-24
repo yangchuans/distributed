@@ -18,14 +18,13 @@
         <property name="jdbcUrl" value="#{jdbc['datasource.url']}"/>
         <property name="username" value="#{jdbc['datasource.username']}"/>
         <property name="password" value="#{jdbc['datasource.password']}"/>
-        <property name="idleConnectionTestPeriod" value="#{jdbc['BoneCP.IdleConnectionTestPeriodInMinutes']}"/>
-        <property name="idleMaxAge" value="#{jdbc['BoneCP.IdleMaxAgeInMinutes']}"/>
+        <property name="idleConnectionTestPeriodInMinutes" value="#{jdbc['BoneCP.IdleConnectionTestPeriodInMinutes']}"/>
+        <property name="idleMaxAgeInMinutes" value="#{jdbc['BoneCP.IdleMaxAgeInMinutes']}"/>
         <property name="maxConnectionsPerPartition" value="#{jdbc['BoneCP.maxConnectionsPerPartition']}"/>
         <property name="minConnectionsPerPartition" value="#{jdbc['BoneCP.minConnectionsPerPartition']}"/>
         <property name="partitionCount" value="#{jdbc['BoneCP.partitionCount']}"/>
         <property name="acquireIncrement" value="#{jdbc['BoneCP.acquireIncrement']}"/>
         <property name="statementsCacheSize" value="#{jdbc['BoneCP.statementsCacheSize']}"/>
-        <property name="releaseHelperThreads" value="#{jdbc['BoneCP.releaseHelperThreads']}"/>
     </bean>
     <!-- 创建SqlSessionFactory，同时创建数据源-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

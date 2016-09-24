@@ -16,7 +16,6 @@ public class ClActionStrategyServiceImpl implements ClActionStrategyService{
 	@Autowired
 	private ClActionStrategyDao  clActionStrategyDao;
 	
-	@Override
 	public List<ClActionStrategy> getAllAction() {
 		return clActionStrategyDao.getAllAction();
 	}
