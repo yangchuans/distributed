@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:util="http://www.springframework.org/schema/util"
-       xsi:schemaLocation="
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
-		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
-	    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
-	    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd
-		">
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context-4.3.xsd
+       http://www.springframework.org/schema/mvc
+	   http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+       http://www.springframework.org/schema/aop 
+       http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+       http://www.springframework.org/schema/util  
+       http://www.springframework.org/schema/util/spring-util-4.3.xsd
+       http://www.springframework.org/schema/tx  
+       http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 	
-    <!-- <mvc:view-controller path="/" view-name="redirect:/test/page"/> -->
-    <!-- <mvc:resources mapping="/common/**" location="/common/" />  -->
+    <mvc:view-controller path="/" view-name="redirect:/test/action"/>
+    <mvc:resources mapping="/common/**" location="/common/" />
 	<!-- Configures the @Controller programming model -->
     <mvc:annotation-driven/>
     <!-- Scans the classpath of this application for @Components to deploy as beans -->
-    <context:component-scan base-package="com.bdms.controller,com.bdms.service,com.bdms.dao"/>
+    <context:component-scan base-package="com.study.controller,com.study.service,com.study.dao"/>
     <bean id="freeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
 	        <property name="cache" value="true"/>
 	        <property name="prefix" value="" />

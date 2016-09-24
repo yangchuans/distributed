@@ -13,11 +13,11 @@
 		    <artifactId>distributed-dao</artifactId>
 		    <version>1.0.0-SNAPSHOT</version>
 		</dependency>
-	    <!-- spring -->
-	    <dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-context</artifactId>
-		    <version>4.3.3.RELEASE</version>
+		<!--  aspectj-->
+		<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>1.8.8</version>
 		</dependency>
   </dependencies>
   <build>
