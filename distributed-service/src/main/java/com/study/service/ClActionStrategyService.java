@@ -1,8 +1,8 @@
 package com.study.service;
 
-import java.util.List;
-
 import com.study.model.ClActionStrategy;
+
+import java.util.List;
 
 public interface ClActionStrategyService {
 	

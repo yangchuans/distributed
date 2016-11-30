@@ -26,46 +26,46 @@
     <mvc:annotation-driven/>
     <!-- Scans the classpath of this application for @Components to deploy as beans -->
     <bean id="freeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
-	        <property name="order" value="0"/>
-	        <property name="cache" value="true"/>
-	        <property name="prefix" value="" />
-	        <property name="suffix" value=".ftl"/>
-	        <property name="exposeRequestAttributes" value="true"/>
-	        <property name="exposeSessionAttributes" value="true"/>
-	        <property name="exposeSpringMacroHelpers" value="true"/>
-	        <property name="allowRequestOverride" value="true" />
-	        <property name="contentType" value="text/html;charset=UTF-8"/>
-	        <property name="requestContextAttribute" value="rc"/>
+		<property name="order" value="0"/>
+		<property name="cache" value="true"/>
+		<property name="prefix" value="" />
+		<property name="suffix" value=".ftl"/>
+		<property name="exposeRequestAttributes" value="true"/>
+		<property name="exposeSessionAttributes" value="true"/>
+		<property name="exposeSpringMacroHelpers" value="true"/>
+		<property name="allowRequestOverride" value="true" />
+		<property name="contentType" value="text/html;charset=UTF-8"/>
+		<property name="requestContextAttribute" value="rc"/>
     </bean>
-	 <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
-		     <property name="order" value="1" />
-		     <property name="contentNegotiationManager">
-	            <bean class="org.springframework.web.accept.ContentNegotiationManager">
-	                <constructor-arg>
-	                    <bean class="org.springframework.web.accept.PathExtensionContentNegotiationStrategy">
-	                        <constructor-arg>
-	                            <map>
-	                                <entry key="json">
-	                                    <util:constant static-field="org.springframework.http.MediaType.APPLICATION_JSON_VALUE" />
-	                                </entry>
-	                                <entry key="xml">
-	                                    <util:constant static-field="org.springframework.http.MediaType.APPLICATION_XML_VALUE" />
-	                                </entry>
-	                            </map>
-	                        </constructor-arg>
-	                    </bean>
-	                </constructor-arg>
-	            </bean>
-	        </property>
-	        <property name="viewResolvers">
-	            <list>
-	                <ref bean="freeMarkerViewResolver"/>
-	            </list>
-	        </property>
-	        <property name="defaultViews">
-	            <list>
-	                <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
-	            </list>
-	        </property>
-	    </bean>
+	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		 <property name="order" value="1" />
+		 <property name="contentNegotiationManager">
+			<bean class="org.springframework.web.accept.ContentNegotiationManager">
+				<constructor-arg>
+					<bean class="org.springframework.web.accept.PathExtensionContentNegotiationStrategy">
+						<constructor-arg>
+							<map>
+								<entry key="json">
+									<util:constant static-field="org.springframework.http.MediaType.APPLICATION_JSON_VALUE" />
+								</entry>
+								<entry key="xml">
+									<util:constant static-field="org.springframework.http.MediaType.APPLICATION_XML_VALUE" />
+								</entry>
+							</map>
+						</constructor-arg>
+					</bean>
+				</constructor-arg>
+			</bean>
+		</property>
+		<property name="viewResolvers">
+			<list>
+				<ref bean="freeMarkerViewResolver"/>
+			</list>
+		</property>
+		<property name="defaultViews">
+			<list>
+				<bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
+			</list>
+		</property>
+	</bean>
 </beans>

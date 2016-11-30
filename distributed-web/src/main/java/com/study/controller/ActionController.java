@@ -23,10 +23,10 @@ public class ActionController {
 	private ClActionStrategyService clActionStrategyService;
 	
 	@RequestMapping(value = "/page", method = RequestMethod.GET)
-	 public String page(HttpServletRequest httpServletRequest, Model model) {
+	public String page(Model model) {
 		List<ClActionStrategy>  actions=clActionStrategyService.getAllAction();
 		model.addAttribute("actions", JsonUtil.toJson(actions));
 		return "test/action";
-	 }
+	}
 
 }

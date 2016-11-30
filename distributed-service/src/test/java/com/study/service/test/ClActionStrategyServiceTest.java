@@ -17,6 +17,6 @@ public class ClActionStrategyServiceTest {
 	
 	@Test
 	public void test(){
-		System.out.println(clActionStrategyService.getAllAction());
+		System.out.println(clActionStrategyService.getAllAction().get(0).getCreatePerson());
 	}
 }

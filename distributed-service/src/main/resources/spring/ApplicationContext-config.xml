@@ -4,15 +4,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:util="http://www.springframework.org/schema/util"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 	   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
-       http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util-4.3.xsd
        http://www.springframework.org/schema/tx  http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 	<!-- Scans the classpath of this application for @Components to deploy as beans -->
-    <!-- 多个包名用逗号隔开, 但不能有空格 -->
+    <!-- split with ',' and no whitespace -->
     <context:component-scan base-package="com.study.service"/>
     <!-- (事物管理)transaction manager, use JtaTransactionManager for global tx -->
     <bean id="distributedTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
